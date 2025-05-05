@@ -1,0 +1,53 @@
+---
+
+const TAGS = {
+    HTML: {
+        name: 'HTML',
+        class: 'bg-orange text-white',
+    },
+    TAILWIND: {
+        name: 'TailwindCSS',
+        class: 'bg-white text-[#73bcf6]',
+    }
+
+}
+const PROJECTS = [
+    {
+        title: 'Carrito de compra de libros',
+        description: 'Compra los libros de tu interes ya sea de como porgramar, tocar musica, cocinar y mas...',
+        link: 'https://svgl.app',
+        github: 'https://github.com/pheralb/svgl',
+        image: '/Projects/svgl.webp',
+        tags: ['HTML', 'JavaScript', 'Tailwind CSS', 'Astro']
+    },
+    {
+        title: 'FoodExpress',
+        description: 'Elige el restuarante de tu conveniencia y prueba los platillos que mas deliciosos que probaras y que mas te guste',
+        link: 'https://svgl.app',
+        github: 'https://github.com/pheralb/svgl',
+        image: '/Projects/FoodExpress.webp',
+        tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'React']
+    }
+]
+---
+
+{
+    PROJECTS.map(({image, title, description, tags}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 mt-4">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class="flex gap-x-2 text-ms py-1 px2 text-yellow-100/50">
+                            {tag}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10" 
+            src={image} 
+            alt={`Captura de pantalla del proyecto ${image}`}/>
+        </article>
+    ))
+}

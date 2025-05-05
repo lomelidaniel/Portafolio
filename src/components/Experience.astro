@@ -1,0 +1,36 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...',
+        title: 'Frontend Engineer',
+        description: 'Progrmador de Paginas de Paginas Web en Astro, React, HTML, CSS y JavaScript.',
+        link:'#'
+    },
+    {
+        date: 'Mayo 2025',
+        title: 'Creo mi primer portafolio en Astro',
+        description: 'Mi primero portafolio en Astro usando tailwind de forma',
+    },
+    {
+        date: 'Marzo 2025',
+        title: 'Food Express',
+        description: 'Mi primera pagina de Food Express en REACT de forma sencilla apreniendo a usarla'
+    },
+    {
+        date: 'Febreeo 2024',
+        title: 'Pagina Web',
+        description: 'Pagina Web creada para el uso aplicado en HTML y CSS de forma que sea compatible con celular y escritorio'
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+</ol>
+

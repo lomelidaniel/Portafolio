@@ -1,0 +1,66 @@
+---
+import Badge from '../components/Badge.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Layout from '../layouts/Layout.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedIn from '../components/icons/linkedIn.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import Experience from '../components/Experience.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Proyects from '../components/Proyects.astro';
+import { Image } from 'astro:assets';
+import Perfil from '../../public/Projects/Perfil.jpeg';
+---
+
+<Layout title='Portfolio de Daniel - Desarrollador y Programador Web con +1 año de experiencia'
+description='Contrata a Daniel para crear aplicaciones Web. Desarrollador Web. Especializado en crear paginas Web únicas'>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<img class="rounded-full size-12 mb-4" src={Perfil.src}	alt="Daniel photo" />
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, soy Daniel Lomeli 
+				<a href="https://www.linkedin.com/in/daniel-lomeli-2a4595326/" target="_blank" rel="nooper" class="flex justify-center items-center">
+					<Badge>Disponible para trabjar</Badge>
+				</a> 
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span >+1 años de experiencia.</span> 
+				<span class="text-yellow-200/90"> Desarrollador Web.</span> 
+				<span class="text-red-200/90"> De Ciudad de México, México🇲🇽.</span>
+				<span class="opacity-75"> Especialidado en crear paginas Web </span>
+			</h2>
+				
+				<nav class="flex gap-4 mt-8 flex-wrap">
+					<SocialPill href="https://www.linkedin.com/in/daniel-lomeli-2a4595326/">
+						<LinkedIn class="size-4 md:size-6"/>
+						LinkedIn
+					</SocialPill>
+					<SocialPill href="https://github.com/lomelidaniel">
+						<GitHubIcon class="size-4 md:size-6"/>
+						GitHub
+					</SocialPill>
+					<SocialPill href="https://mail.google.com/mail/u/0/#inbox">
+						<MailIcon class="size-4 md:size-6"/>
+						daniellomeli1196@gmial.com
+					</SocialPill>
+				</nav>
+		</SectionContainer>
+			
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center ">
+				<Briefcase class="size-7"/>
+				Experiencia Laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
+			
+		<SectionContainer id="proyectos">
+			<h2 class="text-xl font-semibold mb-6 flex gap-x-3 items-center ">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Proyects/>
+		</SectionContainer>
+	</main>
+</Layout>
